@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import HeaderView from '@/components/HeaderComponents/HeaderView.vue'
-
+import MainComponent from'@/components/MainComponents/MainView.vue'
 </script>
 
 <template>
@@ -9,7 +9,9 @@ import HeaderView from '@/components/HeaderComponents/HeaderView.vue'
       <el-header>
         <HeaderView />
       </el-header>
-      <el-main>Main</el-main>
+      <el-main>
+        <MainComponent />
+      </el-main>
       <el-footer>Footer</el-footer>
     </el-container>
   </div>
@@ -23,5 +25,9 @@ import HeaderView from '@/components/HeaderComponents/HeaderView.vue'
   height: 230px;
 }
 
+.el-main {
+  padding: 0;
+  margin: 0;
+}
 </style>
 
