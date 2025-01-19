@@ -30,14 +30,10 @@ const search = ref('')
                 :suffix-icon="Search"
                 />
         </div>
-    </div>
-
-    
+    </div>    
 </template>
 
 <style scoped lang="scss">
-
-
 .header-box {
     background-color:antiquewhite;
     height: 230px;
