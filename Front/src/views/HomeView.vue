@@ -20,6 +20,7 @@ import HeaderView from '@/components/HeaderComponents/HeaderView.vue'
   padding: 0;
   margin: 0;
   background-color: #f0f0f0;
+  height: 230px;
 }
 
 </style>
