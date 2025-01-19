@@ -9,13 +9,12 @@ const search = ref('')
 
 <template>
     <div class="header-box">
-        <div class="header-top">
+        <div class="header-top" style="font-size: 20px;">
             <span style="cursor: pointer;">昆明理工大学网站</span>
             <sapn style="position: absolute;left: 190px;display: flex;cursor: pointer;">简体</sapn>
-            <div class="divider" style="left: 230px;"/>
+            <el-divider direction="vertical" class="custom-divider" />
             <sapn style="position: absolute;left: 240px;display: flex;cursor: pointer;">繁体</sapn>
             <span style="position: absolute;right: 0;display: flex;cursor: pointer;">个人登录中心</span>
-            
         </div>
         <div class="header-logo"></div>
         <div class="header-title">
@@ -30,6 +29,32 @@ const search = ref('')
                 :suffix-icon="Search"
                 />
         </div>
+        <div class="header-down">
+            <div class="section">
+                <strong style="cursor: pointer;">首页</strong>
+                <div class="underline"></div>
+            </div>
+            <div class="section">
+                <strong style="cursor: pointer;">红色历史</strong>
+                <div class="underline"></div>
+            </div>
+            <div class="section">
+                <strong style="cursor: pointer;">英雄人物</strong>
+                <div class="underline"></div>
+            </div>
+            <div class="section">
+                <strong style="cursor: pointer;">云南长征</strong>
+                <div class="underline"></div>
+            </div>
+            <div class="section">
+                <strong style="cursor: pointer;">知识图谱</strong>
+                <div class="underline"></div>
+            </div>
+            <div class="section">
+                <strong style="cursor: pointer;">智能问答</strong>
+                <div class="underline"></div>
+            </div>
+        </div>
     </div>    
 </template>
 
@@ -38,6 +63,7 @@ const search = ref('')
     background-color:antiquewhite;
     height: 230px;
     display: flex;
+    position: relative;
 
     .header-logo{
         position: absolute;
@@ -76,20 +102,61 @@ const search = ref('')
     .header-top{
         display: flex;
         position: absolute;
-        left:60%;
+        left:55%;
         top: 5px;
         color: hsl(0, 31%, 58%);
-        width: 450px;
+        width: 480px;
         height: 50px;
         align-items: center;
         user-select: none;
 
-        .divider{
+        .custom-divider {
             position: absolute;
-            width: 1px;
-            height: 13px;
-            border-radius: 4px;
-            background-color: #757272;
+            left: 235px;
+            height: 20px;
+            margin: auto 0;
+            background-color: #333; // 设置分割线颜色为深色
+            width: 1px; // 设置分割线的宽度
+        }
+    }
+
+    .header-down{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 50px;
+        bottom: 0;
+        background-color: #c70505;
+        padding: 0 7%;
+
+        .section {
+            flex: 1;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 19px;
+            user-select: none;
+        }
+
+        .section:last-child {
+            border-right: none;
+        }
+
+        .underline {
+            display: flex;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 0;
+            background-color: #fac9a6; 
+            transition: height 0.3s; 
+        }
+
+        .section:hover .underline {
+            height: 8px; /* 鼠标悬浮时的高度 */
         }
     }
 }
