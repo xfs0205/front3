@@ -114,7 +114,6 @@ import Module4 from '@/components/MainComponents/Module4.vue';
 
 .module-3 {
     width: 100%;
-    height: 500px;
     background-color: rgb(89, 228, 177, 0);
 }
 

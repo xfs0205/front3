@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const handleClick = (box: string) => {
-  alert(`You clicked ${box}`);
+  console.log(`You clicked ${box}`); 
 };
 </script>
 
@@ -28,7 +28,7 @@ const handleClick = (box: string) => {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 550px;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -76,13 +76,31 @@ const handleClick = (box: string) => {
   align-items: center;
   color: white;
   font-weight: bold;
+  font-family: "楷体", "KaiTi", serif; 
   border: none; 
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: transform 0.3s ease, z-index 0.3s ease; 
+  position: relative; 
+  z-index: 1; 
+  overflow: hidden; 
+  border-radius: 3px;
+}
 
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.3); 
-  }
+.box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0.14) 100%);
+  z-index: -1; 
+}
+
+.box:hover {
+  transform: scale(1.1); 
+  z-index: 10; 
+  background-color: rgba(0, 0, 0, 0.3); 
 }
 
 .large {
@@ -91,6 +109,7 @@ const handleClick = (box: string) => {
   font-size: 30px;
   background-size: cover; 
   background-position: center; 
+  margin-top: 20px;
 }
 
 .small {
@@ -99,22 +118,23 @@ const handleClick = (box: string) => {
   font-size: 30px;
   background-size: cover;
   background-position: center; 
+  margin-top: 10px;
 }
 
 /* 背景图片路径 */
 .map-overview {
-  background-image: url('src/assets/image1.jpg'); /* 地图总览的背景图片 */
+  background-image: url('src/assets/image1.jpg'); 
 }
 
 .celebrity-homes {
-  background-image: url('src/assets/image2.jpg'); /* 名人故居的背景图片 */
+  background-image: url('src/assets/image2.jpg'); 
 }
 
 .memorial-venues {
-  background-image: url('src/assets/image3.jpg'); /* 纪念场馆的背景图片 */
+  background-image: url('src/assets/image3.jpg'); 
 }
 
 .war-sites {
-  background-image: url('src/assets/image4.jpg'); /* 抗战遗址的背景图片 */
+  background-image: url('src/assets/image4.jpg'); 
 }
 </style>
