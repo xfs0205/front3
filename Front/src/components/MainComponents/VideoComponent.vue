@@ -46,6 +46,7 @@
     font-family: '黑体';
     line-height: 1.5;
     letter-spacing: 1.2px; 
+    user-select: none;
 }
 .video-component {
     display: flex;
