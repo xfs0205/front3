@@ -52,12 +52,10 @@
     align-items: flex-start;
 }
 
-/* .video-section {
-    flex: 0 0 50%; 
-} */
-
 video {
-    width: 100%; /* 视频宽度占满视频区域 */
+    width: 90%; /* 视频宽度占满视频区域 */
     height: 100%; /* 保持视频的宽高比 */
+    margin-left: 10%;
+    border-radius: 5px;
 }
 </style>

@@ -5,15 +5,17 @@ import MainComponent from'@/components/MainComponents/MainView.vue'
 
 <template>
   <div class="common-layout">
-    <el-container>
-      <el-header>
-        <HeaderView />
-      </el-header>
-      <el-main>
-        <MainComponent />
-      </el-main>
-      <el-footer>Footer</el-footer>
-    </el-container>
+    <el-scrollbar height="100vh">
+      <el-container>
+        <el-header>
+          <HeaderView />
+        </el-header>
+        <el-main>
+          <MainComponent />
+        </el-main>
+        <el-footer>Footer</el-footer>
+      </el-container>
+    </el-scrollbar>
   </div>
 </template>
 
