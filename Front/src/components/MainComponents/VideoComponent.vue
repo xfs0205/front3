@@ -10,6 +10,9 @@
             </video>
         </div>
         <div class="text-section">
+            <h1 style="display: flex;align-items: center;font-family:  '楷体', '宋体', sans-serif;color: chocolate;">
+                红色记忆
+            </h1>
             <span>
                 &nbsp;&nbsp;“数字传承”强调利用现代信息技术，如互联网、数据库、多媒体等，来记录、保存、传播和教育后代关于这些红色记忆。这不仅有助于防止历史记忆的流失，还能让更多人，尤其是年轻一代，更便捷地接触和了解这些重要的文化遗产。
             </span>
@@ -40,7 +43,7 @@
     flex: 0.8;
     padding-left: 50px;
     padding-right: 20px;
-    margin-top: 100px;
+    margin-top: 40px;
     color: rgb(0, 0, 0);
     font-size: 20px;
     font-family: '黑体';

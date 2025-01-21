@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import HeaderView from '@/components/HeaderComponents/HeaderView.vue'
 import MainComponent from'@/components/MainComponents/MainView.vue'
+import FooterView from '@/components/FooterComponents/FooterView.vue';
 </script>
 
 <template>
@@ -13,7 +14,9 @@ import MainComponent from'@/components/MainComponents/MainView.vue'
         <el-main>
           <MainComponent />
         </el-main>
-        <el-footer>Footer</el-footer>
+        <el-footer>
+          <FooterView/>
+        </el-footer>
       </el-container>
     </el-scrollbar>
   </div>
@@ -28,6 +31,11 @@ import MainComponent from'@/components/MainComponents/MainView.vue'
 }
 
 .el-main {
+  padding: 0;
+  margin: 0;
+}
+
+.el-footer{
   padding: 0;
   margin: 0;
 }

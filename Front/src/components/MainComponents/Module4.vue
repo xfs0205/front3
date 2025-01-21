@@ -5,7 +5,8 @@
 <template>
   <div>
     <!-- 顶部标题 -->
-    <div class="header">云南红色故事</div>
+    <div class="header">
+      <strong>云南红色故事</strong></div>
     <!-- 主容器 -->
     <div class="outer-container">
       <div class="container">
@@ -28,11 +29,10 @@
 /* 顶部标题样式 */
 .header {
   text-align: center;
-  color: rgb(203, 82, 82);
+  color: black;
   /* 红色标题 */
-  font-size: 1.5rem;
+  font-size: 30px;
   font-weight: bold;
-  margin-top: 20px;
   /* 距离页面顶部20px */
   height: 80px;
   /* 剩余80px给标题 */
