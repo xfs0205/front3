@@ -8,7 +8,7 @@ const year = ref(new Date().getFullYear());
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                &copy; {{ year }} 昆明理工大学。
+                &copy; {{ year }} 昆明理工大学
             </p>
         </div>
     </footer>

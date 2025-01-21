@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import HeaderView from '@/components/HeaderComponents/HeaderView.vue'
-import MainComponent from'@/components/MainComponents/MainView.vue'
 import FooterView from '@/components/FooterComponents/FooterView.vue';
 </script>
 
@@ -12,7 +11,7 @@ import FooterView from '@/components/FooterComponents/FooterView.vue';
           <HeaderView />
         </el-header>
         <el-main>
-          <MainComponent />
+          <router-view/>
         </el-main>
         <el-footer>
           <FooterView/>

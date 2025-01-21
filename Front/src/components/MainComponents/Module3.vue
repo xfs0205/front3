@@ -123,18 +123,18 @@ const handleClick = (box: string) => {
 
 /* 背景图片路径 */
 .map-overview {
-  background-image: url('src/assets/image1.jpg'); 
+  background-image: url('@/assets/image1.jpg'); 
 }
 
 .celebrity-homes {
-  background-image: url('src/assets/image2.jpg'); 
+  background-image: url('@/assets/image2.jpg'); 
 }
 
 .memorial-venues {
-  background-image: url('src/assets/image3.jpg'); 
+  background-image: url('@/assets/image3.jpg'); 
 }
 
 .war-sites {
-  background-image: url('src/assets/image4.jpg'); 
+  background-image: url('@/assets/image4.jpg'); 
 }
 </style>

@@ -5,7 +5,11 @@ import lookcard3 from '@/components/MainComponents/lookcard3.vue';
 import Module3 from '@/components/MainComponents/Module3.vue';
 import Module4 from '@/components/MainComponents/Module4.vue';
 
-const imgPath = new URL('@/assets/image1.jpg', import.meta.url).href
+const imgPath1 = new URL('@/assets/images/lishi.png', import.meta.url).href
+const imgPath2 = new URL('@/assets/images/person.png', import.meta.url).href
+const imgPath3 = new URL('@/assets/images/chang.png', import.meta.url).href
+const imgPath4 = new URL('@/assets/images/kg.png', import.meta.url).href
+const imgPath5 = new URL('@/assets/images/answer.png', import.meta.url).href
 </script>
 
 <template>
@@ -61,19 +65,19 @@ const imgPath = new URL('@/assets/image1.jpg', import.meta.url).href
                 </template>
             </lookcard> -->
             <div class="card-box">
-                <lookcard3 :imgName="'红色历史'" :imgPath="imgPath"/>
+                <lookcard3 :imgName="'红色历史'" :imgPath="imgPath1"/>
             </div>
             <div class="card-box">
-                <lookcard3 :imgName="'英雄人物'" :imgPath="imgPath"/>
+                <lookcard3 :imgName="'英雄人物'" :imgPath="imgPath2"/>
             </div>
             <div class="card-box">
-                <lookcard3 :imgName="'云南长征'" :imgPath="imgPath"/>
+                <lookcard3 :imgName="'云南长征'" :imgPath="imgPath3"/>
             </div>
             <div class="card-box">
-                <lookcard3 :imgName="'知识图谱'" :imgPath="imgPath"/>
+                <lookcard3 :imgName="'知识图谱'" :imgPath="imgPath4"/>
             </div>
             <div class="card-box">
-                <lookcard3 :imgName="'智能问答'" :imgPath="imgPath"/>
+                <lookcard3 :imgName="'智能问答'" :imgPath="imgPath5"/>
             </div>
         </div>
     </div>
@@ -95,7 +99,7 @@ const imgPath = new URL('@/assets/image1.jpg', import.meta.url).href
 
 .module-1 {
     width: 100%;
-    height: 400px;
+    height: 450px;
     background-color: transparent;
     position: relative;
 }

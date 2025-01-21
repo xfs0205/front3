@@ -1,9 +1,16 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { Search } from '@element-plus/icons-vue';
+import { useRouter } from 'vue-router';
+
+const touter = useRouter()
 
 const title = ref('红色记忆的数字传承')
 const search = ref('')
+
+const Goto = (page: string) => {
+    touter.push(page)
+}
 
 </script>
 
@@ -30,27 +37,31 @@ const search = ref('')
                 />
         </div>
         <div class="header-down">
-            <div class="section">
+            <div class="section" @click="Goto('/')">
                 <strong style="cursor: pointer;">首页</strong>
                 <div class="underline"></div>
             </div>
-            <div class="section">
-                <strong style="cursor: pointer;">红色历史</strong>
+            <div class="section"  @click="Goto('/about')">
+                <strong style="cursor: pointer;">红色记忆</strong>
                 <div class="underline"></div>
             </div>
-            <div class="section">
+            <div class="section" @click="Goto('/person')">
                 <strong style="cursor: pointer;">英雄人物</strong>
                 <div class="underline"></div>
             </div>
-            <div class="section">
+            <div class="section" @click="Goto('/long')">
                 <strong style="cursor: pointer;">云南长征</strong>
                 <div class="underline"></div>
             </div>
-            <div class="section">
+            <div class="section" @click="Goto('/history')">
+                <strong style="cursor: pointer;">红色历史</strong>
+                <div class="underline"></div>
+            </div>
+            <div class="section" @click="Goto('/kg')">
                 <strong style="cursor: pointer;">知识图谱</strong>
                 <div class="underline"></div>
             </div>
-            <div class="section">
+            <div class="section" @click="Goto('/chat')">
                 <strong style="cursor: pointer;">智能问答</strong>
                 <div class="underline"></div>
             </div>

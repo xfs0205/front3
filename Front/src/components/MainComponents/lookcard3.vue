@@ -102,7 +102,7 @@ const props = defineProps<{
         transform: translate(-50%, -50%);
         width: 55%;
         height: 55%;
-        background-color: antiquewhite;
+        background-color: rgb(167, 167, 167);
         transition: background-color 0.5s ease, transform 0.5s ease;
         z-index: 101;
         background-size: cover;

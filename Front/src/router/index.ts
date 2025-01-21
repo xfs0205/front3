@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '@/views/HomeView.vue'
+import LargeScreen from '@/views/LargeScreen.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,15 +8,43 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView,
+      component: LargeScreen,
     },
     {
       path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue'),
+      component: HomeView,
+      children:[
+        {
+          path: '',
+          name: 'main',
+          component: () => import('@/components/MainComponents/MainView.vue'),
+        },
+        {
+          path: '/person',
+          name: 'person',
+          component: () => import('@/components/PersonCompoents/PersonView.vue')
+        },
+        {
+          path: '/long',
+          name: 'long',
+          component: () => import('@/components/LongComponents/LongView.vue')
+        },
+        {
+          path: '/history',
+          name: 'history',
+          component: () => import('@/components/HistoryComponents/HistoryView.vue')
+        },
+        {
+          path: '/kg',
+          name: 'kg',
+          component: () => import('@/components/KGComponents/KGView.vue')
+        },
+        {
+          path: '/chat',
+          name: 'chat',
+          component: () => import('@/components/AIComponents/AIView.vue')
+        }
+      ]
     },
   ],
 })
