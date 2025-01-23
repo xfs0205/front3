@@ -10,7 +10,8 @@ export default defineConfig({
   server: {
     proxy: {
       // 'backend/img' => 'http://127.0.0.1:18742/backend/img'
-      "/backend": 'http://127.0.0.1:18742/'
+      // "/backend": 'http://127.0.0.1:18742/'
+      "/backend": 'http://47.102.108.198:19999/'
     }
   },
   plugins: [
