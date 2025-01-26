@@ -21,8 +21,24 @@ const router = createRouter({
         },
         {
           path: '/person',
-          name: 'person',
-          component: () => import('@/components/PersonCompoents/PersonView.vue')
+          children:[
+            {
+              path: '',
+              name: 'person',
+              component: () => import('@/components/PersonCompoents/PersonView.vue'),
+            },
+            {
+              path: 'personth',
+              name: 'personth',
+              component: () => import('@/components/PersonCompoents/PersonTH.vue'),
+            },
+            {
+              path: 'personfo',
+              name: 'personfo',
+              component: () => import('@/components/PersonCompoents/PersonFO.vue'),
+            },
+          ]
+
         },
         {
           path: '/long',
