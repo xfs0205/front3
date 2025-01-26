@@ -9,11 +9,11 @@ const prefectures = ref([
   "大理白族自治州", "德宏傣族景颇族自治州", "怒江傈僳族自治州", "迪庆藏族自治州"
 ]);
 
-const handleClick = (type: string, name: string) => {
+const handleClick = (type:string,mininame:string,name:string) => {
   // 使用编程式导航跳转到子路由
-  router.push({ name: 'personth',query:{
-    type:type, name:name
-  } }); // 修改为跳转到 personth 页面
+  router.push({ name: 'personth' ,query:{
+    type:type, name:name, mininame:mininame
+  }}); // 修改为跳转到 personth 页面
 };
 </script>
 
@@ -34,7 +34,7 @@ const handleClick = (type: string, name: string) => {
       </div>
       <div class="areas">
         <div class="area" v-for="(prefecture, index) in prefectures" :key="index" 
-        @click="handleClick(prefecture, prefecture+'英雄人物')">
+        @click="handleClick('map',prefecture, prefecture+'英雄人物')">
           {{ prefecture }}
         </div>
       </div>

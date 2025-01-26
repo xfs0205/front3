@@ -17,8 +17,9 @@ const backgroundImage = ref(new URL('Front/public/person/heroback.jpg', import.m
 const heroes = ref<Hero[]>([])
 
 async function findData() {
+
   await request.post('/backend/persons_path/datas',
-    { query: route.query.type, type: route.query.name },
+    { query: route.query.type, type: route.query.mininame },
     {
       headers: {
         'accept': 'application/json',

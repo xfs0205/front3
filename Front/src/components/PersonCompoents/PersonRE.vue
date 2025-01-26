@@ -2,11 +2,11 @@
 import { useRouter } from 'vue-router';
 const router = useRouter();
 
-const handleClick = () => {
+const handleClick = (type:string,mininame:string,name:string) => {
   // 使用编程式导航跳转到子路由
-  router.push({ name: 'personth', query: {
-    type: 'all', name: '云南英雄人物'
-  }}); 
+  router.push({ name: 'personth' ,query:{
+    type:type, name:name, mininame:mininame
+  }}); // 修改为跳转到 personth 页面
 };
 
 </script>
@@ -26,7 +26,7 @@ const handleClick = () => {
             </el-carousel>
         </div>
         <div class="toor">
-            <span style="cursor: pointer;" @click="handleClick">查看更多</span>
+            <span style="cursor: pointer;" @click="handleClick('all', '云南英雄人物', '云南英雄人物')">查看更多</span>
         </div>
     </div>
 </template>

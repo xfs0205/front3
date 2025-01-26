@@ -24,10 +24,10 @@ const leaveField = (fieldName: string) => {
   console.log(`鼠标离开：${fieldName}`);
 };
 
-const handleClick = (type:string,name:string) => {
+const handleClick = (type:string,mininame:string,name:string) => {
   // 使用编程式导航跳转到子路由
   router.push({ name: 'personth' ,query:{
-    type:type, name:name
+    type:type, name:name, mininame:mininame
   }}); // 修改为跳转到 personth 页面
 };
 </script>
@@ -47,7 +47,7 @@ const handleClick = (type:string,name:string) => {
           :key="field.name"
           @mouseenter="hoverField(field.name)"
           @mouseleave="leaveField(field.name)"
-          @click="handleClick(field.name, field.name+'英雄人物')"
+          @click="handleClick('type',field.name, field.name+'英雄人物')"
         >
           <div class="field-content">
             <img src="/public/person/hero.jpg" alt="领域图片" class="field-image" />
