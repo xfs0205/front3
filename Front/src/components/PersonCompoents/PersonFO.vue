@@ -1,39 +1,37 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import request from '@/utils/request';
 
 interface Hero {
-  
   name: string;
   image: string;
   introduction: string;
-  backgroundColor: string;
 }
-
-const heroes: Hero[] = [
-  {
-    
-    name: '英雄1',
-    image: new URL('@/assets/hero1.jpg', import.meta.url).href,
-    introduction: '这是英雄1的简介，在xx领域有着非凡成就。',
-    backgroundColor: 'rgba(255, 215, 0, 0.1)',
-  },
-  {
-    
-    name: '英雄2',
-    image: new URL('@/assets/hero2.jpg', import.meta.url).href,
-    introduction: '英雄2在xx领域同样表现出色，为领域发展做出重要贡献。',
-    backgroundColor: 'rgba(204, 153, 51, 0.1)',
-  },
-];
-
 const route = useRoute();
 const router = useRouter();
 const currentHero = ref<Hero | null>(null);
 
+async function findData() {
+
+  await request.post('/backend/persons_info/datas',
+    { name: route.query.name },
+    {
+      headers: {
+        'accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    }
+  ).then(re => {
+    currentHero.value = re.data
+  }).catch(err => {
+    console.error(err)
+    currentHero.value = null
+  })
+}
+
 onMounted(() => {
-  const heroname = (route.query.name);
-  currentHero.value = heroes.find(hero => hero.name === heroname) || null;
+  findData()
 });
 
 const goBack = () => {
@@ -82,8 +80,10 @@ const goBack = () => {
   top: 20px;
   left: 20px;
   padding: 8px 16px;
-  background: none; /* 无背景色 */
-  color: #888; /* 灰色字体 */
+  background: none;
+  /* 无背景色 */
+  color: #888;
+  /* 灰色字体 */
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -92,7 +92,8 @@ const goBack = () => {
 }
 
 .back-button:hover {
-  color: #555; /* 悬停时更深的灰色 */
+  color: #555;
+  /* 悬停时更深的灰色 */
 }
 
 .person-fo {
@@ -144,7 +145,8 @@ const goBack = () => {
   box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
 }
 
-.relations-canvas, .events-canvas {
+.relations-canvas,
+.events-canvas {
   margin-bottom: 20px;
   padding: 20px;
   border: 1px solid #dcdcdc;
@@ -154,7 +156,8 @@ const goBack = () => {
   height: 40%;
 }
 
-.relations-canvas h2, .events-canvas h2 {
+.relations-canvas h2,
+.events-canvas h2 {
   margin-top: 0;
   color: #8b4513;
 }
