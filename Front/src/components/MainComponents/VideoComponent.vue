@@ -6,7 +6,7 @@
     <div class="video-component">
         <div class="video-section">
             <video controls autoplay>
-                <source src="http://127.0.0.1:5173/backend/static_video/test1.mp4" type="video/mp4">
+                <source src="http://47.102.108.198:19999/backend/static_video/test1.mp4" type="video/mp4">
             </video>
         </div>
         <div class="text-section">

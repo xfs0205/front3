@@ -18,9 +18,9 @@ const Goto = (page: string) => {
     <div class="header-box">
         <div class="header-top" style="font-size: 20px;">
             <span style="cursor: pointer;">昆明理工大学网站</span>
-            <sapn style="position: absolute;left: 190px;display: flex;cursor: pointer;">简体</sapn>
+            <span style="position: absolute;left: 190px;display: flex;cursor: pointer;">简体</span>
             <el-divider direction="vertical" class="custom-divider" />
-            <sapn style="position: absolute;left: 240px;display: flex;cursor: pointer;">繁体</sapn>
+            <span style="position: absolute;left: 240px;display: flex;cursor: pointer;">繁体</span>
             <span style="position: absolute;right: 0;display: flex;cursor: pointer;">个人登录中心</span>
         </div>
         <div class="header-logo"></div>
