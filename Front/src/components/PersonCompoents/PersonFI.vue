@@ -33,10 +33,12 @@ const handleClick = (type:string,mininame:string,name:string) => {
         <img src="/public/person/map.jpg" alt="云南地图" style="width: 100%; height: 100%;" />
       </div>
       <div class="areas">
+        <el-scrollbar height="450px">
         <div class="area" v-for="(prefecture, index) in prefectures" :key="index" 
         @click="handleClick('map',prefecture, prefecture+'英雄人物')">
           {{ prefecture }}
         </div>
+        </el-scrollbar>
       </div>
     </div>
   </div>

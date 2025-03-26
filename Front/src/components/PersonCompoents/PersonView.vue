@@ -6,9 +6,9 @@ import PersonRE from '@/components/PersonCompoents/PersonRE.vue';
 </script>
 
 <template>
-    <div class="module-1">
+    <!-- <div class="module-1">
         <PersonRE></PersonRE>
-    </div>
+    </div> -->
 
     <div class="module-2">
         <PersonFI></PersonFI>
